@@ -1,52 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tokenizer.h"
-
-int space_char(char c);
-int non_space_char(char c);
-char *word_start(char *str);
-char *word_terminator(char *word);
-int count_words(char *s);
-char *copy_str(char *inStr, short len);
-void free_tokens(char** tokens);
-void print_tokens(char** tokens);
-char **tokenize(char *s);
+#include "history.h"
 
 int main(){
-    char c1 = '\t';
-    char c2 = ' ';
-    char c3 = 'N';
+  return 0;
 
-    char word1[] = "        Hello world 2021"; 
-    char word2[] = "Nice to meet you";
-
-    printf("Test space_char [110]: ") ;
-    printf("%d", space_char(c1));
-    printf("%d", space_char(c2));
-    printf("%d", space_char(c3));
-
-    printf("\nTest non_space_char [001]: ") ;
-    printf("%d", non_space_char(c1));
-    printf("%d", non_space_char(c2));
-    printf("%d", non_space_char(c3));
-
-    printf("\n%s", word2);
-    printf("%s", "\nTest word_start: ");
-    printf("%s", word_start(word2));
-
-    printf("%s", "\nTest word_start: ");
-    printf("%s", word_terminator(word2));    
-
-    printf("%s", "\n\nTest count words: ");
-    printf("%d", count_words(word2));    
-
-    printf("\nPrinting tokens: ");
-    print_tokens(tokenize(word2));
-
-    printf("\nFreeing tokens: \n");
-    free_tokens(tokenize(word2));      
 }
+  /*  char phrase[100];
+  printf("Input a phrase you would like to tokenize: \n");
+  while(1){
 
+    printf("If you want to tokenize a phrase, enter the the new phrase\nIf you want to stop tokenizing, press q\n");
+    fgets(phrase,100,stdin);
+
+    if(phrase[0] == 'q'){
+      printf("Freeing Tokens\nBye Bye!\n");
+      free_tokens(tokenize(phrase));
+      exit(0);
+    }else{
+      print_tokens(tokenize(phrase));
+      printf("Freeing tokens...\n");
+      free_tokens(tokenize(phrase));
+    }
+  }
+  return 0;
+  }*/
+  
 int space_char(char c){
     if(c == ' ' || c == '\t'){      // return 1 if there is a space 
         return 1;          
